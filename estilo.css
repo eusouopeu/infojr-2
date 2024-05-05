@@ -1,0 +1,145 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #BCCDD0;
+}
+
+
+
+/* IMAGENS */
+
+#imagem-principal, #div-principal {
+    height: fixed 492px;
+}
+
+
+
+/* TEXTO */
+
+h1 {
+    font-family: Josefin Sans;
+    font-size: 36px;
+    font-weight: 600;
+    color: #111313;
+}
+
+h2 {
+    font-family: Overpass;
+    font-size: 24px;
+    font-weight: 500;
+    color: #111313;
+}
+
+h3 {
+    font-family: Overpass;
+    font-size: 20px;
+    font-weight: 500;
+    color: #DFDFD6;
+}
+
+p {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+}
+    p.date {
+        font-family: Overpass;
+        font-size: 16px;
+        font-weight: 500;
+}
+
+
+
+/* H MENU */
+
+button {
+    border: hidden;
+    background-color: transparent;
+}
+
+#hmenu {
+    align-self: flex-end;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    width: moz-fit-content;
+    gap: 15px;
+    padding: 10px 15px;
+    margin: 68px 0 7px 0;
+    border-radius: 15px;
+    background-color: #696F5A;
+}
+
+
+
+/* SEÇÕES */
+
+main {
+    padding: 8%;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 875px;
+    /* height: 491.63px; */
+    top: 318px;
+    left: 428px;
+}
+
+#div-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #DFDFD6;
+    width: 584px;
+    padding: 50px 30px 40px 30px;
+    border-radius: 0 30px 30px 0;
+}
+
+
+
+/* CLASSES */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 782px) {
+    section {
+        flex-direction: column;
+    }
+    #imagem-principal {
+        transform: rotate(45deg);
+    }
+}

@@ -1,8 +1,8 @@
 function mostrarMenu() {
-    let hmenu = document.getElementById("hmenu");
-    if (hmenu.style.visibility === "hidden") {
-        hmenu.style.visibility = "visible";
+    let hMenu = document.getElementById("h-menu");
+    if (hMenu.style.visibility === "hidden") {
+        hMenu.style.visibility = "visible";
     } else {
-        hmenu.style.visibility = "hidden";
+        hMenu.style.visibility = "hidden";
     };
 };

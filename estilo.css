@@ -1,78 +1,98 @@
-/* GERAL */
+/* IMPORTAÇÕES */
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+
+/* GERAL */
+
 * {
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
     gap: 0;
-    box-sizing: border-box;
+    
+    font-family: Overpass;
+    font-weight: 500;
+    color: #111313;
 }
 
-body {
-    background: #BCCDD0;
-}
 
-
-
-/* IMAGENS */
-
-#imagem-mobile, div-principal {
-    width: 350px;
-}
-
-#imagem-desktop {
-    display: none;
-}
 
 /* TEXTO */
 
 h1 {
     font-family: Josefin Sans;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
-    color: #111313;
 }
-
 h2 {
-    font-family: Overpass;
-    font-size: 24px;
-    font-weight: 500;
-    color: #111313;
+    font-size: 1.5rem;
 }
-
 h3 {
-    font-family: Overpass;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 1.25rem;
     color: #DFDFD6;
 }
-
+h6 {
+    font-size: 1rem;
+}
 p {
     font-family: Open Sans;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
     font-weight: 400;
 }
-    p.date {
-        font-family: Overpass;
-        font-size: 16px;
-        font-weight: 500;
+
+
+
+/* SEÇÕES */
+
+body {
+    background-color: #BCCDD0;
+    margin: auto;
+}   
+main, section, div {
+    display: flex;
+    flex-direction: column;
+}
+    main {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        
+        margin: 2%;
+}
+    section {
+        width: 21.875rem;
+    }
+    .div-principal {
+        justify-content: space-between;
+        
+        background: #DFDFD6;
+        padding: 1.5rem 1.875rem;
+        border-radius: 0 0 1.875rem 1.875rem;
+}
+    .div-perfil1 {
+        flex-direction: row;
+        justify-content: space-between;
+}
+    .div-perfil2 {
+        flex-direction: row;
+
+        gap: 0.75rem;
 }
 
 
 
-/* H MENU */
+/* H-MENU */
 
 button {
     border: hidden;
     background-color: transparent;
 }
-
-#hmenu {
+#h-menu {
     align-self: flex-end;
     visibility: hidden;
 
@@ -81,93 +101,45 @@ button {
     flex-wrap: nowrap;
     align-items: center;
 
-    width: fit-content;
-    gap: 15px;
-    padding: 10px 15px;
-    margin: 68px 0 7px 0;
-    border-radius: 15px;
     background-color: #696F5A;
+    width: fit-content;
+    gap: 1rem;
+    padding: 0.625rem 1rem;
+    margin: 1.5rem 0 0.75rem 0;
+    border-radius: 1rem;
 }
 
 
 
-/* SEÇÕES */
+/* IMAGENS */
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
-    padding: 0 ;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-#div-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background: #DFDFD6;
-    width: 350px;
-    padding: 25px 30px;
-    border-radius: 0 0 30px 30px;
-}
-
-#titulo-principal {
-    margin-bottom: 32px;
+#imagem-desktop {
+    display: none;
 }
 
 
 
-/* CLASSES */
+/* RESPONSIVIDADE (padrão mobile-first) */
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#perfil-doguito {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-/* RESPONSIVIDADE */
-
-@media screen and (min-width: 782px) {
+@media (min-width: 768px) {
+    h1 {
+        margin-bottom: 2rem;
+    }
+    main {
+        margin-top: 13vh;
+    }
+    section {
+        flex-direction: row;
+        width: fit-content;
+    }
+    .div-principal {
+        max-width: 36rem;
+        border-radius: 0 1.875rem 1.875rem 0;
+    }
     #imagem-mobile {
         display: none;
     }
     #imagem-desktop {
-        display: initial;
-    }
-    #imagem-desktop, #div-principal {
-        height: 490px;
-    }
-    #div-principal {
-        width: 584px;
-        border-radius: 0 30px 30px 0;
-    }
-    section {
-        flex-direction: row;
-    }
-    #div-texto {
-        gap: 30px;
+        display: unset;
     }
 }
